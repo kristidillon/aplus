@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="supported-color-schemes" content="light">
+<title>A+ Smile / BNY Dental — Fort Lauderdale, FL</title>
+<meta name="description" content="A+ Smile / BNY Dental P.C. — modern general, cosmetic, and implant dentistry in Fort Lauderdale. Dr. Natalia Bartkova, DDS and Dr. Yuriy Kaziyev, DDS.">
+<style>
+/* APlus Smile / BNY Dental — brand system
+   Strategy: align web palette with the practice's printed logo (teal tooth
+   + gold swoosh) for cross-touchpoint consistency. Teal = trust/medical,
+   gold = premium warmth, white = clean/clinical-calm.
+   Palette: white · ink #1C2422 · teal #157A72 · aqua tint #ECF5F3 ·
+   gold #C9A05C · gray #5F6B68 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --ink: #1C2422;
+  --gray: #5F6B68;
+  --teal: #157A72;
+  --teal-deep: #0F5F59;
+  --aqua: #ECF5F3;
+  --sand: #F7F4EE;
+  --gold: #C9A05C;
+}
+html {
+  scroll-behavior: smooth;
+  color-scheme: only light;
+  background-color: #ffffff !important;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background-color: #ffffff !important;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.55;
+}
+h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
+.logo-plus { font-style: italic; color: var(--teal); }
+/* Nav */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(28,36,34,.08);
+}
+.nav-inner {
+  max-width: 1060px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 15px 24px;
+}
+.nav-logo {
+  font-weight: 700; font-size: 19px; color: var(--ink);
+  text-decoration: none;
+}
+.nav-links { display: flex; align-items: center; gap: 26px; }
+.nav-links a {
+  color: var(--ink); text-decoration: none; font-size: 14px;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-cta {
+  background: var(--teal); color: #fff !important;
+  padding: 9px 18px; border-radius: 999px; font-weight: 600;
+}
+.nav-cta:hover { background: var(--teal-deep); }
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 104px 24px 88px;
+  max-width: 880px; margin: 0 auto;
+}
+.hero-badge {
+  display: inline-block;
+  background: var(--aqua); color: var(--teal-deep);
+  font-size: 14px; font-weight: 600;
+  padding: 8px 18px; border-radius: 999px;
+  margin-bottom: 26px;
+}
+.hero h1 {
+  font-size: clamp(48px, 8vw, 88px);
+  line-height: 1.04;
+  color: var(--ink);
+}
+.hero-motto {
+  color: var(--teal); font-size: clamp(16px, 2vw, 19px);
+  font-weight: 600;
+  margin-top: 16px;
+}
+.hero-sub {
+  color: var(--gray);
+  font-size: clamp(17px, 2.3vw, 21px); max-width: 560px;
+  margin: 16px auto 0;
+  line-height: 1.6;
+}
+.hero-actions {
+  margin-top: 36px;
+  display: flex; gap: 26px; justify-content: center; align-items: center;
+  flex-wrap: wrap;
+}
+.trust-row {
+  margin: 44px auto 0; padding: 0;
+  list-style: none;
+  display: flex; gap: 12px 34px; justify-content: center; flex-wrap: wrap;
+  color: var(--gray); font-size: 14.5px;
+}
+.trust-row li::before {
+  content: ""; display: inline-block;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gold); margin-right: 9px;
+  vertical-align: 2px;
+}
+/* Buttons */
+.btn {
+  background: var(--teal); color: #fff; text-decoration: none;
+  padding: 14px 28px; border-radius: 999px;
+  font-size: 16px; font-weight: 600;
+  display: inline-block;
+  transition: background .2s ease;
+}
+.btn:hover { background: var(--teal-deep); }
+.btn:focus-visible, a:focus-visible {
+  outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 6px;
+}
+.btn-link { color: var(--teal); text-decoration: none; font-size: 16px; font-weight: 500; }
+.btn-link:hover { text-decoration: underline; }
+/* Sections */
+.section {
+  max-width: 1060px; margin: 0 auto;
+  padding: 92px 24px;
+}
+.alt-tint {
+  max-width: none;
+  background: var(--aqua);
+}
+.alt-tint > * { max-width: 1060px; margin-left: auto; margin-right: auto; }
+.section h2 {
+  font-size: clamp(32px, 4.6vw, 48px);
+  line-height: 1.1;
+}
+.section-sub {
+  color: var(--gray); font-size: 18px; max-width: 560px;
+  margin-top: 16px;
+}
+/* Offers */
+.offers {
+  margin-top: 48px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+}
+.offer {
+  display: flex; flex-direction: column;
+  background: var(--sand);
+  border-radius: 24px;
+  padding: 34px 30px;
+  text-decoration: none; color: var(--ink);
+  transition: transform .15s ease;
+}
+.offer:hover { transform: translateY(-3px); }
+.offer-featured {
+  background: var(--teal); color: #fff;
+}
+.offer-featured .offer-tag { color: var(--gold); }
+.offer-featured .offer-sub { color: rgba(255,255,255,.85); }
+.offer-featured .offer-cta { color: #fff; border-color: rgba(255,255,255,.5); }
+.offer-tag {
+  font-size: 13px; font-weight: 700; color: var(--teal);
+  margin-bottom: 10px;
+}
+.offer h3 { font-size: 24px; font-weight: 700; letter-spacing: -0.015em; }
+.offer-sub { font-size: 15px; color: var(--gray); margin-top: 10px; flex: 1; }
+.offer-cta {
+  margin-top: 22px; font-size: 15px; font-weight: 600;
+  color: var(--teal);
+  border-bottom: 1.5px solid rgba(21,122,114,.4);
+  width: fit-content; padding-bottom: 2px;
+}
+/* Results */
+.results {
+  margin-top: 48px;
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 44px;
+  align-items: center;
+}
+.result img {
+  width: 100%; max-width: 380px;
+  border-radius: 20px; display: block;
+}
+.result figcaption {
+  font-size: 13.5px; color: var(--gray); margin-top: 12px; max-width: 380px;
+}
+.results-copy h3 { font-size: 26px; font-weight: 700; letter-spacing: -0.015em; }
+.results-copy p { color: var(--gray); margin: 14px 0 26px; font-size: 16.5px; }
+/* Services grid */
+.grid {
+  margin-top: 48px;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+}
+.card {
+  background: var(--sand);
+  border-radius: 20px;
+  padding: 30px 26px;
+}
+.card h3 { font-size: 17.5px; font-weight: 700; margin-bottom: 8px; }
+.card p { color: var(--gray); font-size: 14.5px; }
+/* The APlus Experience — warm neutral block */
+.experience {
+  max-width: none;
+  background: #ECE9E4;
+  text-align: center;
+}
+.experience > * { max-width: 720px; margin-left: auto; margin-right: auto; }
+.experience h2 { color: #6B5D50; }
+.exp-list {
+  list-style: none;
+  margin-top: 40px;
+  text-align: left;
+  display: flex; flex-direction: column; gap: 26px;
+}
+.exp-list li {
+  font-size: clamp(18px, 2.4vw, 22px);
+  line-height: 1.5;
+  color: var(--ink);
+  padding-left: 28px;
+  position: relative;
+}
+.exp-list li::before {
+  content: "•"; position: absolute; left: 4px; color: #6B5D50;
+}
+.exp-list strong { color: #8A7A69; font-weight: 700; }
+.exp-cta { margin-top: 48px; }
+.exp-cta .btn {
+  background: #AC9C8C; letter-spacing: .08em; text-transform: uppercase;
+  font-size: 15px; padding: 16px 40px;
+}
+.exp-cta .btn:hover { background: #97877A; }
+/* Review */
+.review-section { padding-top: 24px; padding-bottom: 24px; }
+.review { text-align: center; max-width: 680px; margin: 0 auto; }
+.review-stars { color: var(--gold); font-size: 24px; letter-spacing: 6px; }
+.review blockquote {
+  font-size: clamp(21px, 3vw, 28px); font-weight: 600;
+  letter-spacing: -0.015em; line-height: 1.35;
+  margin-top: 16px; color: var(--ink);
+}
+.review-source { color: var(--gray); font-size: 14px; margin-top: 16px; }
+/* Doctors */
+.doctors {
+  margin-top: 48px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 22px;
+}
+.doctor {
+  background: var(--sand);
+  border-radius: 24px;
+  padding: 44px 34px;
+  text-align: center;
+}
+.doctor-portrait {
+  width: 200px; height: 260px;
+  object-fit: cover; object-position: top center;
+  border-radius: 999px 999px 8px 8px;
+  margin: 0 auto 24px; display: block;
+}
+.doctor h3 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; }
+.doctor p { color: var(--gray); margin-top: 12px; font-size: 15px; max-width: 400px; margin-left: auto; margin-right: auto; }
+/* Visit */
+.visit {
+  margin-top: 44px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.visit-col h3 { font-size: 16px; margin-bottom: 10px; font-weight: 700; }
+.visit-col p { color: var(--gray); font-size: 15.5px; margin-bottom: 8px; }
+.visit-col a { color: var(--teal); text-decoration: none; }
+.visit-col a:hover { text-decoration: underline; }
+.fine { font-size: 12.5px; color: #9AA5A2; }
+/* Form */
+.consult-form {
+  margin-top: 40px; max-width: 620px;
+  display: flex; flex-direction: column; gap: 18px;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.consult-form label {
+  display: flex; flex-direction: column; gap: 8px;
+  font-size: 14px; font-weight: 600; color: var(--ink);
+}
+.consult-form input, .consult-form select, .consult-form textarea {
+  font: inherit; font-weight: 400; color: var(--ink);
+  background: #fff; border: 1px solid rgba(28,36,34,.15);
+  border-radius: 12px; padding: 13px 15px;
+}
+.consult-form input:focus, .consult-form select:focus, .consult-form textarea:focus {
+  outline: 2px solid var(--teal); outline-offset: 1px; border-color: transparent;
+}
+.form-btn { border: none; cursor: pointer; align-self: flex-start; margin-top: 6px; }
+/* Footer */
+.footer {
+  border-top: 1px solid rgba(28,36,34,.08);
+  padding: 40px 24px 48px;
+  text-align: center;
+  color: var(--gray); font-size: 13.5px;
+}
+.footer p + p { margin-top: 8px; }
+.footer-motto {
+  font-weight: 700; color: var(--ink); font-size: 15px;
+  margin-bottom: 14px;
+}
+.socials {
+  display: flex; gap: 22px; justify-content: center;
+  margin-bottom: 18px;
+}
+.socials a {
+  color: var(--teal); text-decoration: none; font-weight: 600; font-size: 14px;
+}
+.socials a:hover { text-decoration: underline; }
+/* Responsive */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .offers { grid-template-columns: 1fr; }
+  .results { grid-template-columns: 1fr; gap: 28px; }
+  .doctors, .visit { grid-template-columns: 1fr; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .result img { margin: 0 auto; }
+  .result figcaption { margin-left: auto; margin-right: auto; text-align: center; }
+}
+@media (max-width: 540px) {
+  .grid { grid-template-columns: 1fr; }
+  .hero { padding: 80px 24px 68px; }
+  .section { padding: 68px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .offer { transition: none; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">A<span class="logo-plus">Plus</span> Smile</a>
+    <div class="nav-links">
+      <a href="#offers">Offers</a>
+      <a href="#services">Services</a>
+      <a href="#doctors">Doctors</a>
+      <a href="#visit">Visit</a>
+      <a class="nav-cta" href="tel:+17548021588">Call (754) 802‑1588</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <span class="hero-badge">Now welcoming new patients in Fort Lauderdale</span>
+  <h1>Smile, naturally.</h1>
+  <p class="hero-motto">The A+ standard of dentistry.</p>
+  <p class="hero-sub">Modern dentistry, done gently. General, cosmetic, and implant care from two doctors who take their time with every patient.</p>
+  <div class="hero-actions">
+    <a class="btn" href="#visit">Book a consult</a>
+    <a class="btn-link" href="#services">Explore services</a>
+  </div>
+  <ul class="trust-row">
+    <li>Same-week appointments</li>
+    <li>Most insurance accepted</li>
+    <li>Free implant &amp; cosmetic consults</li>
+  </ul>
+</header>
+
+<section class="section" id="offers">
+  <h2>Start with a smart first visit.</h2>
+  <p class="section-sub">Three easy ways to get in the chair — pick the one that fits where your smile is today.</p>
+  <div class="offers">
+    <a class="offer" href="#visit">
+      <span class="offer-tag">New patients</span>
+      <h3>New Patient Exam</h3>
+      <p class="offer-sub">Comprehensive exam, digital X‑rays, and a clear plan for your smile — all in one visit.</p>
+      <span class="offer-cta">Book my exam</span>
+    </a>
+    <a class="offer offer-featured" href="#visit">
+      <span class="offer-tag">Most requested</span>
+      <h3>Free Implant Consult</h3>
+      <p class="offer-sub">Missing or failing teeth? Sit down with the doctor, see your options, and get honest pricing — no obligation.</p>
+      <span class="offer-cta">Claim my consult</span>
+    </a>
+    <a class="offer" href="#visit">
+      <span class="offer-tag">Cosmetics</span>
+      <h3>Free Smile Consult</h3>
+      <p class="offer-sub">Whitening, veneers, or a full makeover — find out what's possible for your smile and your budget.</p>
+      <span class="offer-cta">See what's possible</span>
+    </a>
+  </div>
+</section>
+
+<section class="section alt-tint" id="results">
+  <h2>Real patients. Real results.</h2>
+  <p class="section-sub">Every smile here was planned and completed in this office by Dr. Bartkova and Dr. Kaziyev.</p>
+  <div class="results">
+    <figure class="result">
+      <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODAiIGhlaWdodD0iMzAwIiB2aWV3Qm94PSIwIDAgMzgwIDMwMCI+CjxyZWN0IHdpZHRoPSIzODAiIGhlaWdodD0iMzAwIiByeD0iMjAiIGZpbGw9IiNGN0Y0RUUiLz4KPHJlY3QgeD0iMjQiIHk9IjI0IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyMCIgcng9IjE0IiBmaWxsPSIjRUNGNUYzIi8+CjxyZWN0IHg9IjE5NiIgeT0iMjQiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjIwIiByeD0iMTQiIGZpbGw9IiMxNTdBNzIiIG9wYWNpdHk9Ii4xOCIvPgo8dGV4dCB4PSIxMDQiIHk9IjI3MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksUm9ib3RvLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM1RjZCNjgiPkJlZm9yZTwvdGV4dD4KPHRleHQgeD0iMjc2IiB5PSIyNzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLFNlZ29lIFVJLFJvYm90byxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNUY2QjY4Ij5BZnRlcjwvdGV4dD4KPC9zdmc+" alt="Before and after smile transformation" width="380" height="300">
+      <figcaption>Full smile restoration — crowns and veneers, completed in-office.</figcaption>
+    </figure>
+    <div class="results-copy">
+      <h3>Planned digitally. Finished beautifully.</h3>
+      <p>Your treatment starts with digital scans and photos, so you see the plan — and the outcome — before anything begins. No guesswork, no surprises, just a smile that looks like it was always yours.</p>
+      <a class="btn" href="#visit">Book a consult</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <h2>Everything your smile needs.<br>In one place.</h2>
+  <p class="section-sub">From routine cleanings to full smile makeovers, care is planned and completed under one roof — no bouncing between offices.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>General dentistry</h3>
+      <p>Exams, fillings, and everyday care that keeps small problems small.</p>
+    </div>
+    <div class="card">
+      <h3>Preventive care</h3>
+      <p>Cleanings, digital X‑rays, and screenings on a schedule that fits your life.</p>
+    </div>
+    <div class="card">
+      <h3>Restorative</h3>
+      <p>Repair damaged or worn teeth so they look, feel, and work like new.</p>
+    </div>
+    <div class="card">
+      <h3>Cosmetic dentistry</h3>
+      <p>Whitening, bonding, and veneers designed around your face — not a template.</p>
+    </div>
+    <div class="card">
+      <h3>Dental implants</h3>
+      <p>Permanent replacement for single teeth or full arches, planned digitally.</p>
+    </div>
+    <div class="card">
+      <h3>Crowns &amp; bridges</h3>
+      <p>Strong, natural-looking restorations matched precisely to your smile.</p>
+    </div>
+    <div class="card">
+      <h3>Orthodontics</h3>
+      <p>Straighter teeth with modern options for teens and adults.</p>
+    </div>
+    <div class="card">
+      <h3>Consultations</h3>
+      <p>Second opinions and honest treatment planning — free for implants and cosmetics.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section experience">
+  <h2>The A<span class="logo-plus">Plus</span> Experience</h2>
+  <ul class="exp-list">
+    <li>Concierge‑level service for a <strong>stress‑free, judgment‑free visit</strong> — from your first call to your final result.</li>
+    <li><strong>The same two doctors</strong> at every visit — your care stays personal, never handed off.</li>
+    <li><strong>Painless, modern treatments</strong> using the latest digital technology.</li>
+    <li>Results that are <strong>as beautiful as they are healthy</strong>.</li>
+    <li><strong>Clear, upfront pricing</strong> — no surprises, ever.</li>
+  </ul>
+  <div class="exp-cta">
+    <a class="btn" href="#visit">Book now</a>
+  </div>
+</section>
+
+<section class="section review-section">
+  <div class="review">
+    <div class="review-stars" aria-hidden="true">★★★★★</div>
+    <blockquote>"The gentlest dental visit I've ever had. They explained everything, the pricing was clear, and my crown looks completely natural."</blockquote>
+    <p class="review-source">Verified patient review</p>
+  </div>
+</section>
+
+<section class="section alt-tint" id="doctors">
+  <h2>Two doctors. One standard.</h2>
+  <p class="section-sub">You'll see the same doctors at every visit — care that stays personal from consult to completion.</p>
+  <div class="doctors">
+    <div class="doctor">
+      <img class="doctor-portrait" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjYwIiB2aWV3Qm94PSIwIDAgMjAwIDI2MCI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjYwIiBmaWxsPSIjRUNGNUYzIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9Ijk1IiByPSI0MiIgZmlsbD0iIzE1N0E3MiIgb3BhY2l0eT0iLjI1Ii8+CjxwYXRoIGQ9Ik00MCAyMjBjOC00NSA0Mi02MiA2MC02MnM1MiAxNyA2MCA2MnoiIGZpbGw9IiMxNTdBNzIiIG9wYWNpdHk9Ii4yNSIvPgo8dGV4dCB4PSIxMDAiIHk9IjI0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksUm9ib3RvLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1RjZCNjgiPlBob3RvOiBEci4gQmFydGtvdmE8L3RleHQ+Cjwvc3ZnPg==" alt="Dr. Natalia Bartkova, DDS" width="200" height="260">
+      <h3>Dr. Natalia Bartkova, DDS</h3>
+      <p>General, restorative, and cosmetic dentistry with a gentle, detail-first approach — known for taking the time to explain every option.</p>
+    </div>
+    <div class="doctor">
+      <img class="doctor-portrait" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjYwIiB2aWV3Qm94PSIwIDAgMjAwIDI2MCI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjYwIiBmaWxsPSIjRUNGNUYzIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9Ijk1IiByPSI0MiIgZmlsbD0iIzE1N0E3MiIgb3BhY2l0eT0iLjI1Ii8+CjxwYXRoIGQ9Ik00MCAyMjBjOC00NSA0Mi02MiA2MC02MnM1MiAxNyA2MCA2MnoiIGZpbGw9IiMxNTdBNzIiIG9wYWNpdHk9Ii4yNSIvPgo8dGV4dCB4PSIxMDAiIHk9IjI0NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksUm9ib3RvLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1RjZCNjgiPlBob3RvOiBEci4gS2F6aXlldjwvdGV4dD4KPC9zdmc+" alt="Dr. Yuriy Kaziyev, DDS" width="200" height="260">
+      <h3>Dr. Yuriy Kaziyev, DDS</h3>
+      <p>Implant and restorative dentistry, digitally planned for precise, comfortable results — from single teeth to full-arch smiles.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="visit">
+  <h2>Visit us in Fort Lauderdale.</h2>
+  <p class="section-sub">Same-week appointments available. Call, or send a consult request and we'll reach out within one business day.</p>
+  <div class="visit">
+    <div class="visit-col">
+      <h3>Location</h3>
+      <p>A+ Smile / BNY Dental P.C.<br>Fort Lauderdale, FL</p>
+      <p><a href="https://maps.google.com/?q=A%2B+Smile+BNY+Dental+Fort+Lauderdale">Get directions</a></p>
+    </div>
+    <div class="visit-col">
+      <h3>Hours</h3>
+      <p>Mon–Fri · 9:00 AM – 5:00 PM<br>Sat · By appointment</p>
+      <p class="fine">Hours may vary on holidays.</p>
+    </div>
+    <div class="visit-col">
+      <h3>Contact</h3>
+      <p><a href="tel:+17548021588">(754) 802‑1588</a></p>
+      <p><a href="mailto:hello@aplussmile.com">hello@aplussmile.com</a></p>
+    </div>
+  </div>
+
+  <form class="consult-form" action="mailto:hello@aplussmile.com" method="post" enctype="text/plain">
+    <div class="form-row">
+      <label>Name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>Phone
+        <input type="tel" name="phone" autocomplete="tel" required>
+      </label>
+    </div>
+    <label>What can we help with?
+      <select name="interest">
+        <option>New patient exam</option>
+        <option>Implant consult (free)</option>
+        <option>Cosmetic consult (free)</option>
+        <option>Cleaning &amp; checkup</option>
+        <option>Something else</option>
+      </select>
+    </label>
+    <label>Anything we should know?
+      <textarea name="notes" rows="4"></textarea>
+    </label>
+    <button class="btn form-btn" type="submit">Request my consult</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <p class="footer-motto">A<span class="logo-plus">Plus</span> Smile — The A+ standard of dentistry.</p>
+  <div class="socials">
+    <a href="https://instagram.com/aplussmilefl">Instagram</a>
+    <a href="https://facebook.com/aplussmilefl">Facebook</a>
+    <a href="https://google.com/maps">Google Reviews</a>
+  </div>
+  <p>© 2026 A+ Smile / BNY Dental P.C. · Fort Lauderdale, FL</p>
+  <p>General · Cosmetic · Restorative · Implants · Orthodontics</p>
+</footer>
+
+</body>
+</html>
