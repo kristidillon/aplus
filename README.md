@@ -15,7 +15,7 @@ aplus-smile-site/
 ├── assets/
 │   ├── dr-bartkova.jpg   # Headshot, 400×520 (displayed at 200×260)
 │   ├── dr-kaziyev.jpg    # Headshot, 400×520
-│   └── before-after.jpg  # Results section image
+│   └── before-after.jpg  # Hero image (before/after)
 ├── .nojekyll             # Tells GitHub Pages to serve the file as-is (no Jekyll build)
 └── README.md
 ```
@@ -39,9 +39,9 @@ Everything marked `TODO` in `index.html` is also listed here.
 - [ ] **Confirm the practice inbox** hello@aplusdentalfl.com is live and monitored (the "Email us" button and mailto links point there).
 - [ ] **Add office hours** to the Visit section when confirmed (intentionally left off for now).
 - [ ] **Confirm the claims on the page**: same-week appointments, "most insurance accepted", free implant & cosmetic consults, clear/upfront pricing.
-- [ ] **Reviews:** the featured quote is a real WebMD review of Dr. Kaziyev. Swap in a Google review once the practice's profile has one.
+- [ ] **Reviews:** the quote in Dr. Kaziyev's card is a real WebMD review. Swap in a Google review once the practice's profile has one.
 - [ ] **Confirm both bios** with the doctors (drafted from their public profiles — years in practice, NYU, Brooklyn/NYC history).
-- [ ] **Before/after photo:** confirm the image in `assets/before-after.jpg` is the practice's own case (with patient consent) — the section is titled "Real patients. Real results."
+- [ ] **Before/after photo:** confirm the image in `assets/before-after.jpg` is the practice's own case (with patient consent) — it sits in the hero captioned "Real patient, real result."
 - [ ] **Add the practice logo** to the nav (currently text: "APlus Smile").
 - [ ] **Social accounts.** Recommended handle: `@APlusSmileFTL`. Create them, replace the `#` links in the footer, and remove `hidden` from the `.socials` div.
 - [ ] **Google Business Profile.** Once it's live, replace the "Google Reviews" footer link with the profile's review link.
