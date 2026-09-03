@@ -1,11 +1,4 @@
-# A+ Smile / BNY Dental — Fort Lauderdale
+A client-facing page for a dental office: accepting new patients, offers general dentistry, restorative, implants, whitening, preventive. free consults. accepts mosts insurances. Located in Fort Lauderdale. client facing practice information.
+Single index.html, no build step. Served via GitHub Pages.
 
-Single-page marketing site. Teal + gold brand system aligned to the printed logo.
-
-## Deploy (GitHub Pages)
-Settings → Pages → Branch: `main` / root → Save.
-Live at: https://kristidillon.github.io/aplus-smile-site/
-
-## Before launch
-- Replace `assets/dr-bartkova.svg`, `assets/dr-kaziyev.svg`, `assets/results-1.svg` with real photos (keep filenames, or update `index.html` paths).
-- Confirm address, hours, and email in the Visit section.
+Presenter notes are hidden by default — press Shift+P or add ?p=1 to the URL.
