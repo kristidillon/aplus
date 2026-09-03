@@ -1,56 +1,59 @@
-# A+ Smile / BNY Dental P.C. — Website Template
+# A+ Smile / BNY Dental P.C. — Website
 
-Apple-style single-page website template for A+ Smile / BNY Dental P.C., Fort Lauderdale, FL.
+Single-page, no-build website for A+ Smile / BNY Dental P.C., Fort Lauderdale, FL.
 
 **Doctors:** Dr. Natalia Bartkova, DDS · Dr. Yuriy Kaziyev, DDS
 **Address:** 6231 N Federal Hwy, Fort Lauderdale, FL 33308
 **Office:** (754) 802-1588 · **Urgent:** (347) 284-8463
-
-## Pre-launch to-dos
-- Pick a domain (suggestions: aplussmile.com, aplussmilefl.com, aplussmiledental.com) and set it as the custom domain in GitHub Pages
-- Create social accounts (recommended handle: @APlusSmileFTL) and replace the "#" links in the footer
-- Confirm referral reward and whitening pricing with the office
-- Replace the before/after photo with a higher-resolution export if available
+**Email (placeholder until domain is set):** hello@aplussmile.com
 
 ## Structure
 
 ```
-aplus-smile-dental/
-├── index.html        # Full single-page site
-├── css/style.css     # Design system (colors, type, layout)
-├── assets/           # Drop photos + logo here
+aplus-smile-site/
+├── index.html    # Entire site — HTML + CSS in one file
+├── .nojekyll     # Tells GitHub Pages to serve the file as-is (no Jekyll build)
 └── README.md
 ```
 
+Placeholder images (before/after, doctor portraits) are inline SVGs inside `index.html`. Add an `assets/` folder when real photos are ready and swap the `src` attributes.
+
 ## Run locally
 
-Just open `index.html` in a browser — no build step, no dependencies.
+Open `index.html` in a browser. No build step, no dependencies.
 
-## Deploy free with GitHub Pages
+## Deploy with GitHub Pages
 
-1. Create a new repo (e.g. `aplus-smile-site`) and push these files.
-2. Repo → **Settings → Pages** → Source: `main` branch, `/ (root)`.
-3. Site goes live at `https://<username>.github.io/aplus-smile-site/`.
-4. To use the real domain: add `drbartkova.com` under **Custom domain** and point the domain's DNS (CNAME) at GitHub Pages.
+1. Repo → **Settings → Pages** → Source: **Deploy from a branch**, `main`, `/ (root)`.
+2. Site goes live at `https://kristidillon.github.io/aplus-smile-site/`.
+3. When a domain is chosen, enter it under **Custom domain** and point the domain's DNS (CNAME → `kristidillon.github.io`) at GitHub Pages.
 
-## Before launch — replace placeholders
+## Before launch — checklist
 
-- [ ] Doctor bios (marked in gold italic in the Doctors section)
-- [ ] Office hours (marked "Update with real hours")
-- [ ] Add real photos to `/assets` — hero photo of the office, headshots for both doctors
-- [ ] Replace the initials circles (`NB` / `YK`) with headshots
-- [ ] Add the practice logo to the nav (currently text "A+ Smile")
-- [ ] Confirm insurance list wording with the office
-- [ ] Activate the contact form: it posts to bnydental17@gmail.com via FormSubmit (free, no backend). The FIRST submission sends a confirmation email to that inbox — click the link in it once and all future requests deliver automatically.
+Everything marked `TODO` in `index.html` is also listed here.
+
+- [ ] **Set the real email.** Contact section uses "Email us" (mailto) and "Call now" buttons — no form. Update `hello@aplussmile.com` in `index.html` once the practice email is decided.
+- [ ] **Add office hours** to the Visit section when confirmed (intentionally left off for now).
+- [ ] **Confirm the claims on the page**: same-week appointments, "most insurance accepted", free implant & cosmetic consults, clear/upfront pricing.
+- [ ] **Add a real patient review.** The review section is hidden (`hidden` attribute) until a real Google review is pasted in. Do not use invented reviews.
+- [ ] **Add real photos**: doctor headshots (200×260 portrait crop) and a before/after case with patient consent. Replace the inline SVG placeholders.
+- [ ] **Add the practice logo** to the nav (currently text: "APlus Smile").
+- [ ] **Social accounts.** Recommended handle: `@APlusSmileFTL`. Create them, replace the `#` links in the footer, and remove `hidden` from the `.socials` div.
+- [ ] **Google Business Profile.** Once it's live, replace the "Google Reviews" footer link with the profile's review link.
+- [ ] **Pick a domain** (ideas: aplussmile.com, aplussmilefl.com, aplussmiledental.com) and set it as the custom domain.
 
 ## Design system
 
+Tokens live in `:root` at the top of `index.html`.
+
 | Token | Value | Use |
 |---|---|---|
-| Ink | `#1d1d1f` | Headlines, body |
-| Gray | `#6e6e73` | Secondary text |
-| Alt bg | `#f5f5f7` | Section backgrounds, cards |
-| Teal | `#0e7c74` | CTAs, links (pulled from the tooth logo) |
-| Gold | `#c99b5f` | Gradient accent (logo's gold swoosh) |
+| `--ink` | `#1C2422` | Headlines, body |
+| `--gray` | `#5F6B68` | Secondary text |
+| `--teal` | `#157A72` | CTAs, links (from the tooth logo) |
+| `--teal-deep` | `#0F5F59` | Hover state |
+| `--aqua` | `#ECF5F3` | Tinted section backgrounds |
+| `--sand` | `#F7F4EE` | Cards |
+| `--gold` | `#C9A05C` | Accents (logo's gold swoosh) |
 
-Type: system SF stack (`-apple-system`) — renders as SF Pro on Apple devices, clean fallbacks everywhere else.
+Type: system stack (`-apple-system`, SF Pro on Apple devices, Segoe/Roboto elsewhere). Light mode only.

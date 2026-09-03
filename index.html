@@ -3,10 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light only">
-<meta name="supported-color-schemes" content="light">
+<meta name="color-scheme" content="light">
 <title>A+ Smile / BNY Dental — Fort Lauderdale, FL</title>
-<meta name="description" content="A+ Smile / BNY Dental P.C. — modern general, cosmetic, and implant dentistry in Fort Lauderdale. Dr. Natalia Bartkova, DDS and Dr. Yuriy Kaziyev, DDS.">
+<meta name="description" content="A+ Smile / BNY Dental P.C. — modern general, cosmetic, and implant dentistry at 6231 N Federal Hwy, Fort Lauderdale, FL. Dr. Natalia Bartkova, DDS and Dr. Yuriy Kaziyev, DDS.">
+<meta property="og:title" content="A+ Smile / BNY Dental — Fort Lauderdale, FL">
+<meta property="og:description" content="Modern general, cosmetic, and implant dentistry in Fort Lauderdale. Now welcoming new patients.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dentist",
+  "name": "A+ Smile / BNY Dental P.C.",
+  "telephone": "+1-754-802-1588",
+  "email": "hello@aplussmile.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "6231 N Federal Hwy",
+    "addressLocality": "Fort Lauderdale",
+    "addressRegion": "FL",
+    "postalCode": "33308",
+    "addressCountry": "US"
+  },
+  "employee": [
+    {"@type": "Person", "name": "Dr. Natalia Bartkova, DDS", "jobTitle": "Dentist"},
+    {"@type": "Person", "name": "Dr. Yuriy Kaziyev, DDS", "jobTitle": "Dentist"}
+  ]
+}
+</script>
 <style>
 /* APlus Smile / BNY Dental — brand system
    Strategy: align web palette with the practice's printed logo (teal tooth
@@ -15,6 +38,7 @@
    Palette: white · ink #1C2422 · teal #157A72 · aqua tint #ECF5F3 ·
    gold #C9A05C · gray #5F6B68 */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+[hidden] { display: none !important; }
 :root {
   --ink: #1C2422;
   --gray: #5F6B68;
@@ -134,7 +158,7 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
   max-width: none;
   background: var(--aqua);
 }
-.alt-tint > * { max-width: 1060px; margin-left: auto; margin-right: auto; }
+.section-inner { max-width: 1060px; margin: 0 auto; }
 .section h2 {
   font-size: clamp(32px, 4.6vw, 48px);
   line-height: 1.1;
@@ -265,32 +289,17 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
 /* Visit */
 .visit {
   margin-top: 44px;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
 }
 .visit-col h3 { font-size: 16px; margin-bottom: 10px; font-weight: 700; }
 .visit-col p { color: var(--gray); font-size: 15.5px; margin-bottom: 8px; }
 .visit-col a { color: var(--teal); text-decoration: none; }
 .visit-col a:hover { text-decoration: underline; }
 .fine { font-size: 12.5px; color: #9AA5A2; }
-/* Form */
-.consult-form {
-  margin-top: 40px; max-width: 620px;
-  display: flex; flex-direction: column; gap: 18px;
-}
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.consult-form label {
-  display: flex; flex-direction: column; gap: 8px;
-  font-size: 14px; font-weight: 600; color: var(--ink);
-}
-.consult-form input, .consult-form select, .consult-form textarea {
-  font: inherit; font-weight: 400; color: var(--ink);
-  background: #fff; border: 1px solid rgba(28,36,34,.15);
-  border-radius: 12px; padding: 13px 15px;
-}
-.consult-form input:focus, .consult-form select:focus, .consult-form textarea:focus {
-  outline: 2px solid var(--teal); outline-offset: 1px; border-color: transparent;
-}
-.form-btn { border: none; cursor: pointer; align-self: flex-start; margin-top: 6px; }
+/* Contact actions */
+.contact-actions { margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-outline { background: #fff; color: var(--teal); border: 2px solid var(--teal); }
+.btn-outline:hover { background: var(--aqua); }
 /* Footer */
 .footer {
   border-top: 1px solid rgba(28,36,34,.08);
@@ -299,6 +308,8 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
   color: var(--gray); font-size: 13.5px;
 }
 .footer p + p { margin-top: 8px; }
+.footer a { color: var(--teal); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
 .footer-motto {
   font-weight: 700; color: var(--ink); font-size: 15px;
   margin-bottom: 14px;
@@ -325,7 +336,7 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
   .grid { grid-template-columns: 1fr; }
   .hero { padding: 80px 24px 68px; }
   .section { padding: 68px 24px; }
-  .form-row { grid-template-columns: 1fr; }
+  .contact-actions .btn { width: 100%; text-align: center; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -336,7 +347,7 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav" aria-label="Primary">
   <div class="nav-inner">
     <a class="nav-logo" href="#top">A<span class="logo-plus">Plus</span> Smile</a>
     <div class="nav-links">
@@ -391,8 +402,10 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
 </section>
 
 <section class="section alt-tint" id="results">
+  <div class="section-inner">
   <h2>Real patients. Real results.</h2>
-  <p class="section-sub">Every smile here was planned and completed in this office by Dr. Bartkova and Dr. Kaziyev.</p>
+  <!-- TODO: replace the placeholder image below with a real before/after photo (with patient consent) before launch -->
+  <p class="section-sub">Smiles planned and completed in this office by Dr. Bartkova and Dr. Kaziyev.</p>
   <div class="results">
     <figure class="result">
       <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODAiIGhlaWdodD0iMzAwIiB2aWV3Qm94PSIwIDAgMzgwIDMwMCI+CjxyZWN0IHdpZHRoPSIzODAiIGhlaWdodD0iMzAwIiByeD0iMjAiIGZpbGw9IiNGN0Y0RUUiLz4KPHJlY3QgeD0iMjQiIHk9IjI0IiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjIyMCIgcng9IjE0IiBmaWxsPSIjRUNGNUYzIi8+CjxyZWN0IHg9IjE5NiIgeT0iMjQiIHdpZHRoPSIxNjAiIGhlaWdodD0iMjIwIiByeD0iMTQiIGZpbGw9IiMxNTdBNzIiIG9wYWNpdHk9Ii4xOCIvPgo8dGV4dCB4PSIxMDQiIHk9IjI3MiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sU2Vnb2UgVUksUm9ib3RvLHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTMiIGZpbGw9IiM1RjZCNjgiPkJlZm9yZTwvdGV4dD4KPHRleHQgeD0iMjc2IiB5PSIyNzIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSItYXBwbGUtc3lzdGVtLFNlZ29lIFVJLFJvYm90byxzYW5zLXNlcmlmIiBmb250LXNpemU9IjEzIiBmaWxsPSIjNUY2QjY4Ij5BZnRlcjwvdGV4dD4KPC9zdmc+" alt="Before and after smile transformation" width="380" height="300">
@@ -403,6 +416,7 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
       <p>Your treatment starts with digital scans and photos, so you see the plan — and the outcome — before anything begins. No guesswork, no surprises, just a smile that looks like it was always yours.</p>
       <a class="btn" href="#visit">Book a consult</a>
     </div>
+  </div>
   </div>
 </section>
 
@@ -459,15 +473,19 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
   </div>
 </section>
 
-<section class="section review-section">
+<!-- Patient review: hidden until a real Google review is available.
+     To enable, paste the actual review text + reviewer first name, then remove the `hidden` attribute.
+     Do not publish an invented review — it violates FTC endorsement rules. -->
+<section class="section review-section" hidden>
   <div class="review">
     <div class="review-stars" aria-hidden="true">★★★★★</div>
-    <blockquote>"The gentlest dental visit I've ever had. They explained everything, the pricing was clear, and my crown looks completely natural."</blockquote>
-    <p class="review-source">Verified patient review</p>
+    <blockquote>"[Paste a real patient review here.]"</blockquote>
+    <p class="review-source">— [First name], Google review</p>
   </div>
 </section>
 
 <section class="section alt-tint" id="doctors">
+  <div class="section-inner">
   <h2>Two doctors. One standard.</h2>
   <p class="section-sub">You'll see the same doctors at every visit — care that stays personal from consult to completion.</p>
   <div class="doctors">
@@ -482,62 +500,41 @@ h1, h2 { font-weight: 700; letter-spacing: -0.022em; }
       <p>Implant and restorative dentistry, digitally planned for precise, comfortable results — from single teeth to full-arch smiles.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <section class="section" id="visit">
   <h2>Visit us in Fort Lauderdale.</h2>
-  <p class="section-sub">Same-week appointments available. Call, or send a consult request and we'll reach out within one business day.</p>
+  <p class="section-sub">Now accepting new patients. Call, or email us and we'll reach out within one business day.</p>
   <div class="visit">
     <div class="visit-col">
       <h3>Location</h3>
-      <p>A+ Smile / BNY Dental P.C.<br>Fort Lauderdale, FL</p>
-      <p><a href="https://maps.google.com/?q=A%2B+Smile+BNY+Dental+Fort+Lauderdale">Get directions</a></p>
-    </div>
-    <div class="visit-col">
-      <h3>Hours</h3>
-      <p>Mon–Fri · 9:00 AM – 5:00 PM<br>Sat · By appointment</p>
-      <p class="fine">Hours may vary on holidays.</p>
+      <p>A+ Smile / BNY Dental P.C.<br>6231 N Federal Hwy<br>Fort Lauderdale, FL 33308</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=6231+N+Federal+Hwy%2C+Fort+Lauderdale%2C+FL+33308" target="_blank" rel="noopener">Get directions</a></p>
     </div>
     <div class="visit-col">
       <h3>Contact</h3>
-      <p><a href="tel:+17548021588">(754) 802‑1588</a></p>
+      <p>Office · <a href="tel:+17548021588">(754) 802‑1588</a></p>
+      <p>Urgent · <a href="tel:+13472848463">(347) 284‑8463</a></p>
       <p><a href="mailto:hello@aplussmile.com">hello@aplussmile.com</a></p>
     </div>
   </div>
 
-  <form class="consult-form" action="mailto:hello@aplussmile.com" method="post" enctype="text/plain">
-    <div class="form-row">
-      <label>Name
-        <input type="text" name="name" autocomplete="name" required>
-      </label>
-      <label>Phone
-        <input type="tel" name="phone" autocomplete="tel" required>
-      </label>
-    </div>
-    <label>What can we help with?
-      <select name="interest">
-        <option>New patient exam</option>
-        <option>Implant consult (free)</option>
-        <option>Cosmetic consult (free)</option>
-        <option>Cleaning &amp; checkup</option>
-        <option>Something else</option>
-      </select>
-    </label>
-    <label>Anything we should know?
-      <textarea name="notes" rows="4"></textarea>
-    </label>
-    <button class="btn form-btn" type="submit">Request my consult</button>
-  </form>
+  <div class="contact-actions">
+    <a class="btn" href="tel:+17548021588">Call now — accepting new patients</a>
+    <a class="btn btn-outline" href="mailto:hello@aplussmile.com?subject=Consult%20request%20%E2%80%94%20A%2B%20Smile&body=Name%3A%0APhone%3A%0AWhat%20can%20we%20help%20with%3F%0A">Email us to request a consult</a>
+  </div>
 </section>
 
 <footer class="footer">
   <p class="footer-motto">A<span class="logo-plus">Plus</span> Smile — The A+ standard of dentistry.</p>
-  <div class="socials">
-    <a href="https://instagram.com/aplussmilefl">Instagram</a>
-    <a href="https://facebook.com/aplussmilefl">Facebook</a>
-    <a href="https://google.com/maps">Google Reviews</a>
+  <!-- TODO: once social accounts exist (recommended handle @APlusSmileFTL), replace the "#" hrefs and remove the `hidden` attribute -->
+  <div class="socials" hidden>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=6231+N+Federal+Hwy%2C+Fort+Lauderdale%2C+FL+33308" target="_blank" rel="noopener">Google Reviews</a>
   </div>
-  <p>© 2026 A+ Smile / BNY Dental P.C. · Fort Lauderdale, FL</p>
+  <p>© 2026 A+ Smile / BNY Dental P.C. · 6231 N Federal Hwy, Fort Lauderdale, FL 33308 · <a href="tel:+17548021588">(754) 802‑1588</a></p>
   <p>General · Cosmetic · Restorative · Implants · Orthodontics</p>
 </footer>
 
